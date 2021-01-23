@@ -1,0 +1,64 @@
+
+<br/>
+<div class="container">
+
+  <h4>RM Mapping to Client</h4>
+  <div class="card">
+    <div class="card-body">
+
+
+        <form>
+            <div class="form-group row">
+              <label for="dropdownEntity" class="col-sm-4 col-form-label">Entity</label>
+              <div class="col-sm-8">
+                <select class="form-control" ng-model="selectEntity" ng-options="x for x in entityValues.values">
+                 </select>
+              </div>
+            </div>
+            <div class="form-group row">
+                <label for="dropdownRelManager" class="col-sm-4 col-form-label">Relationship Manager Name</label>
+                <div class="col-sm-8">
+                  <select class="form-control" ng-model="selectRelManager" ng-options="y for y in relManagerNameValues.values">
+                      
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="dropdownRMSalesCode" class="col-sm-4 col-form-label">RM Sales Code</label>
+                <div class="col-sm-8">
+                  <select class="form-control" ng-model="selectRMSalesCode" ng-options="x for x in rmSalesCodeValues.values">
+                      
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="dropdownLMName" class="col-sm-4 col-form-label">LM Name</label>
+                <div class="col-sm-8">
+                  <select class="form-control" ng-model="selectLMName" ng-options="x for x in lmNameValues.values">
+                     
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="dropdownAccountType" class="col-sm-4 col-form-label">Account Type</label>
+                <div class="col-sm-8">
+                  <select class="form-control" ng-model="selectAccountType" ng-options="x for x in accountTypeValues.values">
+                      
+                    </select>
+                </div>
+            </div>
+
+            <p class="text-right">
+                <button type="button" class="btn btn-secondary" ng-click="rmTaggingSave()">SAVE</button>
+                <button type="button" class="btn btn-secondary">NEXT</button>
+            </p>
+          </form>
+    </div>
+  </div>
+
+    
+
+</div>
