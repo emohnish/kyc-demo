@@ -33,16 +33,20 @@
 -->
 
 
-<p id="demo"></p>
-
-<script>
-
-</script>
 
 
 <div class="container-fluid">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <img src="" class="rounded float-left" alt="Banner here...">
+                <br/><br/>
+            </div>
+        </div>
+    </div>
     <div class="row content">
-      <div class="col-md-3 sidenav">
+        <div class="col-md-3 sidenav bg-light text-white">
        <!-- <ul class="nav nav-pills nav-stacked">
           <li class="active"><a href="#section1">Home / My Requests</a></li>
           <li><a href="#section2">Account Onboarding</a></li>
@@ -50,12 +54,12 @@
           <li><a href="#section3">Help</a></li>
         </ul><br>
 -->
-        <ul class="nav nav-pills flex-column">
+        <ul class="nav nav-pills flex-column nav-fill">
             <li class="nav-item">
               <a class="nav-link" data-toggle="tab" href="#">Home / My Requests</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" data-toggle="tab" href="#">Account Onboarding</a>
+              <a class="nav-link active" data-toggle="tab" href="#!rmTagging">Account Onboarding</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" data-toggle="tab" href="#">Rolling Review</a>
@@ -64,12 +68,12 @@
               <a class="nav-link" data-toggle="tab" href="#">Help</a>
             </li>
           </ul>
-    `</div>
+       </div>
   
-    <div class="col-md-9">
+        <div class="col-md-9">
         <div class="row">
             <div class="col-md-12">
-                <ul class="nav nav-tabs nav-justified">
+                <ul class="nav nav-pills nav-justified nav-fill" id="myTab">
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#!rmTagging">RM Tagging</a>
                     </li>
@@ -80,10 +84,10 @@
                         <a class="nav-link" data-toggle="tab" href="#!riskAssessment">Risk Assessment</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#">Document Upload</a>
+                        <a class="nav-link" data-toggle="tab" href="#!documentUpload">Document Upload</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#">Submit</a>
+                        <a class="nav-link" data-toggle="tab" href="#!submit">Submit</a>
                     </li>
                 </ul>
             </div>
@@ -92,7 +96,7 @@
                 <div ng-view></div>
             </div>
         </div>
-      </div>
+        </div>
 
       
 <!--

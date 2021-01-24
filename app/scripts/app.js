@@ -13,12 +13,16 @@ app.config(function($routeProvider) {
     })
     .when("/blue", {
         templateUrl : "../app/pages/blue.html"
-    }).when("/kycwriteup", {
-        templateUrl : "../app/pages/kycwriteup.html"
     }).when("/rmTagging", {
         templateUrl : "../app/pages/rmTagging.html"
+    }).when("/kycwriteup", {
+        templateUrl : "../app/pages/kycwriteup.html"
     }).when("/riskAssessment", {
         templateUrl : "../app/pages/riskAssessment.html"
+    }).when("/documentUpload", {
+        templateUrl : "../app/pages/documentUpload.html"
+    }).when("/submit", {
+        templateUrl : "../app/pages/submitPage.html"
     });
 });
 
@@ -94,10 +98,12 @@ app.controller("myCtrl", function($scope, $http, $location) {
 
     $scope.rmTaggingNext = function () {
         $location.path('/kycwriteup'); 
+        $('#myTab a[href="#!kycwriteup"]').tab('show');
     }
 
     $scope.kycWriteupPrevious = function () {
         $location.path('/rmTagging'); 
+        $('#myTab a[href="#!rmTagging"]').tab('show');
     }
 
     $scope.kycWriteupSaveAsDraft = function () {
@@ -105,8 +111,8 @@ app.controller("myCtrl", function($scope, $http, $location) {
     }
 
     $scope.kycWriteupSaveAndNext = function () {
-        $scope.show = !$scope.show;
         $location.path('/riskAssessment'); 
+        $('#myTab a[href="#!riskAssessment"]').tab('show');
     }
 
     $scope.kycwriteup = {};
