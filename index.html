@@ -16,7 +16,7 @@
 
 <body ng-app="myApp" ng-controller="myCtrl">
 
-
+<!--
 <p><a href="#/!">Main</a></p>
 
 <a href="#!red">Red</a>
@@ -30,19 +30,26 @@
 
 <p>This example uses the ng-view directive as an attribute to a DIV element.</p>
 
+-->
 
+
+<p id="demo"></p>
+
+<script>
+
+</script>
 
 
 <div class="container-fluid">
     <div class="row content">
       <div class="col-md-3 sidenav">
-        <ul class="nav nav-pills nav-stacked">
+       <!-- <ul class="nav nav-pills nav-stacked">
           <li class="active"><a href="#section1">Home / My Requests</a></li>
           <li><a href="#section2">Account Onboarding</a></li>
           <li><a href="#section3">Rolling Review</a></li>
           <li><a href="#section3">Help</a></li>
         </ul><br>
-
+-->
         <ul class="nav nav-pills flex-column">
             <li class="nav-item">
               <a class="nav-link" data-toggle="tab" href="#">Home / My Requests</a>
@@ -70,7 +77,7 @@
                         <a class="nav-link" data-toggle="tab" href="#!kycwriteup">KYC Writeup</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#">Risk Assessment</a>
+                        <a class="nav-link" data-toggle="tab" href="#!riskAssessment">Risk Assessment</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#">Document Upload</a>

@@ -8,99 +8,93 @@
 
 
         <form>
+            <h5>Client Particulars</h5>
             <div class="alert alert-secondary">
 
                 <div class="form-group row">
-                    <label for="dropdownEntity" class="col-md-2 col-form-label">Given Name</label>
+                    <label for="textboxGivenName" class="col-md-2 col-form-label">Given Name</label>
                     <div class="col-md-2">
-                        <select class="form-control" ng-model="selectEntity" ng-options="x for x in entityValues.values">
-                        </select>
+                        <input type="text" class="form-control" placeholder="" ng-model="kycwriteup.givenName">
                     </div>
-                    <label for="dropdownEntity" class="col-md-2 col-form-label">Surname</label>
+                    <label for="textboxSurname" class="col-md-2 col-form-label">Surname</label>
                     <div class="col-md-2">
-                        <select class="form-control" ng-model="selectEntity" ng-options="x for x in entityValues.values">
-                        </select>
+                        <input type="text" class="form-control" placeholder="" ng-model="kycwriteup.surName">
                     </div>
-                    <label for="dropdownEntity" class="col-md-2 col-form-label">DOB</label>
+                    <label for="textboxDOB" class="col-md-2 col-form-label">DOB</label>
                     <div class="col-md-2">
-                        <select class="form-control" ng-model="selectEntity" ng-options="x for x in entityValues.values">
-                        </select>
+                        <input type="text" class="form-control" placeholder="" ng-model="kycwriteup.dob">
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="dropdownEntity" class="col-md-2 col-form-label">Nationality</label>
+                    <label for="dropdownNationality" class="col-md-2 col-form-label">Nationality</label>
                     <div class="col-md-2">
-                        <select class="form-control" ng-model="selectEntity" ng-options="x for x in entityValues.values">
+                        <select class="form-control" ng-init="kycwriteup.nationality = kycwriteup.nationality || countryList[0]" ng-model="kycwriteup.nationality" ng-options="x for x in countryList">
                         </select>
                     </div>
-                    <label for="dropdownEntity" class="col-md-4 col-form-label">Country of Domicile</label>
+                    <label for="dropdownCountryOfDomicile" class="col-md-4 col-form-label">Country of Domicile</label>
                     <div class="col-md-4">
-                        <select class="form-control" ng-model="selectEntity" ng-options="x for x in entityValues.values">
+                        <select class="form-control" ng-init="kycwriteup.countryOfDomicile = kycwriteup.countryOfDomicile || countryList[0]" ng-model="kycwriteup.countryOfDomicile" ng-options="x for x in countryList">
                         </select>
                     </div>
                 </div>
 
                 <div class="form-group row">
-                    <label for="dropdownEntity" class="col-md-2 col-form-label">Tax Residence</label>
+                    <label for="dropdownTaxResidence" class="col-md-2 col-form-label">Tax Residence</label>
                     <div class="col-md-2">
-                        <select class="form-control" ng-model="selectEntity" ng-options="x for x in entityValues.values">
+                        <select class="form-control" ng-init="kycwriteup.taxResidence = kycwriteup.taxResidence || countryList[0]" ng-model="kycwriteup.taxResidence" ng-options="x for x in countryList">
                         </select>
                     </div>
-                    
-                    
-                    <div class="col-md-8">
-                        
-                    </div>
+                    <div class="col-md-8"></div>
                 </div>
             </div>
 
+            <h5>Client Identification</h5>
             <div class="alert alert-secondary">
 
                 <div class="form-group row">
-                    <label for="dropdownEntity" class="col-md-3 col-form-label">Identification Type</label>
+                    <label for="dropdownIdentificationType" class="col-md-3 col-form-label">Identification Type</label>
                     <div class="col-md-3">
-                        <select class="form-control" ng-model="selectEntity" ng-options="x for x in entityValues.values">
+                        <select class="form-control" ng-init="kycwriteup.identificationType = kycwriteup.identificationType || countryList[0]" ng-model="kycwriteup.identificationType" ng-options="x for x in countryList">
                         </select>
                     </div>
-                    <label for="dropdownEntity" class="col-md-3 col-form-label">Identification No.</label>
+                    <label for="textboxIdentificationNo" class="col-md-3 col-form-label">Identification No.</label>
                     <div class="col-md-3">
-                        <select class="form-control" ng-model="selectEntity" ng-options="x for x in entityValues.values">
-                        </select>
+                        <input type="text" class="form-control" placeholder="" ng-model="kycwriteup.identificationNo">
                     </div>
                    
                 </div>
 
                 <div class="form-group row">
-                    <label for="dropdownEntity" class="col-md-2 col-form-label">Issue Country</label>
+                    <label for="dropdownIssueCountry" class="col-md-2 col-form-label">Issue Country</label>
                     <div class="col-md-2">
-                        <select class="form-control" ng-model="selectEntity" ng-options="x for x in entityValues.values">
+                        <select class="form-control" ng-init="kycwriteup.issueCountry = kycwriteup.issueCountry || countryList[0]" ng-model="kycwriteup.issueCountry" ng-options="x for x in countryList">
                         </select>
                     </div>
-                    <label for="dropdownEntity" class="col-md-2 col-form-label">Issue Date</label>
+                    <label for="textboxIssueDate" class="col-md-2 col-form-label">Issue Date</label>
                     <div class="col-md-2">
-                        <select class="form-control" ng-model="selectEntity" ng-options="x for x in entityValues.values">
-                        </select>
+                        <input type="text" class="form-control" placeholder="" ng-model="kycwriteup.issueDate">
                     </div>
 
-                    <label for="dropdownEntity" class="col-md-2 col-form-label">Valid Till</label>
+                    <label for="textboxValidTill" class="col-md-2 col-form-label">Valid Till</label>
                     <div class="col-md-2">
-                        <select class="form-control" ng-model="selectEntity" ng-options="x for x in entityValues.values">
-                        </select>
+                        <input type="text" class="form-control" placeholder="" ng-model="kycwriteup.validTill">
                     </div>
                 
                 </div>
-
-                
             </div>
 
-
-
             <p class="text-right">
-                <button type="button" class="btn btn-secondary">PREVIOUS</button>
-                <button type="button" class="btn btn-secondary">SAVE AS DRAFT</button>
-                <button type="button" class="btn btn-secondary">SAVE AND NEXT</button>
+                <button type="button" class="btn btn-secondary" ng-click="kycWriteupPrevious()">Previous</button>
+                <button type="button" class="btn btn-secondary" ng-click="kycWriteupSaveAsDraft()">Save As Draft</button>
+                <button type="button" class="btn btn-secondary" ng-click="kycWriteupSaveAndNext()">Save And Next</button>
             </p>
+
+            <pre ng-hide="!showKycWriteupJson"> 
+                <code>
+                {{kycwriteup|json}}
+                </code>
+            </pre>
           </form>
     </div>
   </div>
